@@ -17,12 +17,7 @@ func findSubstring(s string, words []string) []int {
 	}
 	wordsMap := make(map[string]int)
 	for _, v := range words {
-		if num, ok := wordsMap[v]; ok {
-			num++
-			wordsMap[v] = num
-		} else {
-			wordsMap[v] = 1
-		}
+		wordsMap[v] = wordsMap[v] + 1
 	}
 	fmt.Println(wordsMap)
 	for i := 0; i+wordLen < len(s); i++ {
