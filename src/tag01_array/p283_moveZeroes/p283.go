@@ -2,6 +2,7 @@ package p283_moveZeroes
 
 import "fmt"
 
+//我的解
 func moveZeroes2(nums []int) {
 	for i := len(nums) - 1; i >= 0; i-- {
 		if nums[i] == 0 {
@@ -13,6 +14,7 @@ func moveZeroes2(nums []int) {
 	}
 }
 
+//最优解
 func moveZeroes(nums []int) {
 	j := 0
 	fmt.Println(nums)
